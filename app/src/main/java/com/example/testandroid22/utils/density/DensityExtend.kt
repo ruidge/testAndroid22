@@ -1,4 +1,4 @@
-package com.example.testandroid22.utils
+package com.example.testandroid22.utils.density
 
 import android.content.Context
 
@@ -46,13 +46,13 @@ val Int.px2dp: Int
 /**
  * 获取屏幕密度
  */
-fun Context?.getDensity(): Float {
+fun Context.getDensity(): Float {
     return DensityUtil.getDensity(this)
 }
 
 /**
  * 获取屏幕密度Dpi
  */
-fun Context?.getDensityDpi(): Int {
+fun Context.getDensityDpi(): Int {
     return DensityUtil.getDensityDpi(this)
 }

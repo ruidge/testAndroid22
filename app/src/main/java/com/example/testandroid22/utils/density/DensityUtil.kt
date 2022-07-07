@@ -1,4 +1,4 @@
-package com.example.testandroid22.utils
+package com.example.testandroid22.utils.density
 
 import android.content.Context
 import android.content.res.Resources
@@ -11,7 +11,6 @@ object DensityUtil {
     /**
      * dp转px
      */
-    @JvmStatic
     fun dp2px(dpValue: Float): Float {
         val density = Resources.getSystem().displayMetrics.density
         return 0.5F + dpValue * density
@@ -20,7 +19,6 @@ object DensityUtil {
     /**
      * px转dp
      */
-    @JvmStatic
     fun px2dp(pxValue: Float): Float {
         val density = Resources.getSystem().displayMetrics.density
         return pxValue / density
@@ -29,7 +27,6 @@ object DensityUtil {
     /**
      * 获取屏幕密度
      */
-    @JvmStatic
     fun getDensity(context: Context?): Float {
         context?.let {
             return it.resources.displayMetrics.density
@@ -41,7 +38,6 @@ object DensityUtil {
     /**
      * 获取屏幕密度的dpi
      */
-    @JvmStatic
     fun getDensityDpi(context: Context?): Int {
         context?.let {
             return it.resources.displayMetrics.densityDpi
@@ -49,6 +45,5 @@ object DensityUtil {
         Log.e(TAG, ERROR_MESSAGE)
         return 0
     }
-
 
 }
