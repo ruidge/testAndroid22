@@ -21,5 +21,8 @@ class MainActivity : AppCompatActivity() {
         findViewById<Button>(R.id.bt_outline).setOnClickListener {
             startActivity(Intent(this, OutlineActivity::class.java))
         }
+        findViewById<Button>(R.id.bt_svg).setOnClickListener {
+            startActivity(Intent(this, SVGActivity::class.java))
+        }
     }
 }
