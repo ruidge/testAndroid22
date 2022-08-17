@@ -25,7 +25,8 @@
 
         <activity android:name=".lifecycle.LifecycleActivity" />
         <activity android:name=".OutlineActivity" />
-        <activity android:name=".SVGActivity" />
+        <activity android:name=".DrawableActivity" />
+        <activity android:name=".CoordinatorActivity" />
     </application>
 
 </manifest>

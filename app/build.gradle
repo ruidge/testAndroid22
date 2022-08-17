@@ -41,6 +41,10 @@ dependencies {
     implementation 'androidx.lifecycle:lifecycle-common:2.4.1'
     implementation 'androidx.lifecycle:lifecycle-runtime:2.4.1'
 
+//    implementation 'com.scwang.smart:refresh-layout-kernel:2.0.3'
+//    implementation 'com.scwang.smart:refresh-header-classics:2.0.3'
+    implementation 'io.github.scwang90:refresh-layout-kernel:2.0.5'      //核心必须依赖
+    implementation 'io.github.scwang90:refresh-header-classics:2.0.5'    //经典刷新头
 
 
 }
