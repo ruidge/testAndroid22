@@ -2,7 +2,7 @@ package com.example.testandroid22
 
 import android.os.Bundle
 import android.view.View
-import android.widget.Scroller
+import android.widget.OverScroller
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -66,12 +66,13 @@ class ScrollActivity : AppCompatActivity() {
             recyclerview2.scrollBy(0, it - init)
             init = it
         }
-        scrollRunnable.startFling(-4000)
+//        scrollRunnable.startFling(6000, 400.dp2px, true, 100.dp2px)
+        scrollRunnable.startFling(6000, 400.dp2px, false, 50.dp2px)
     }
 
 
     class ScrollRunnable(val view: View, val scrollCallback: (Int) -> Unit) : Runnable {
-        val scroller: Scroller = Scroller(view.context)
+        val scroller: OverScroller = OverScroller(view.context)
 
         var dy: Int = 0
 
@@ -82,18 +83,33 @@ class ScrollActivity : AppCompatActivity() {
             view.post(this)
         }
 
-        fun startFling(velocityY: Int) {
-            //minX <= 终止值的x坐标 <= maxX
-            //minY <= 终止值的y坐标 <= maxY
+        fun startFling(velocityY: Int, dy: Int, isDown: Boolean, overY: Int) {
+            this.dy = dy
+            //minX <= 终止值的x坐标 <= maxX, minY <= 终止值的y坐标 <= maxY 需判断正负
+            //overY
             scroller.fling(
                 0,
                 0,
                 0,
-                velocityY,
-                -Int.MAX_VALUE,
-                Int.MAX_VALUE,
-                -Int.MAX_VALUE,
-                Int.MAX_VALUE
+                if (isDown) {
+                    velocityY
+                } else {
+                    -velocityY
+                },
+                0,
+                0,
+                if (isDown) {
+                    0
+                } else {
+                    -dy
+                },
+                if (isDown) {
+                    dy
+                } else {
+                    0
+                },
+                0,
+                overY,
             )
             view.post(this)
         }
