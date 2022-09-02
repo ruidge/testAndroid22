@@ -27,5 +27,8 @@ class MainActivity : AppCompatActivity() {
         findViewById<Button>(R.id.bt_coordinator).setOnClickListener {
             startActivity(Intent(this, CoordinatorActivity::class.java))
         }
+        findViewById<Button>(R.id.bt_scroll).setOnClickListener {
+            startActivity(Intent(this, ScrollActivity::class.java))
+        }
     }
 }

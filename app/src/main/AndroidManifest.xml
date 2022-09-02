@@ -27,6 +27,7 @@
         <activity android:name=".OutlineActivity" />
         <activity android:name=".DrawableActivity" />
         <activity android:name=".CoordinatorActivity" />
+        <activity android:name=".ScrollActivity" />
     </application>
 
 </manifest>

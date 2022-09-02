@@ -1,35 +1,46 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    tools:context=".MainActivity">
+    android:orientation="vertical">
 
-    <Button
-        android:id="@+id/bt_lifecycle"
-        android:layout_width="wrap_content"
-        android:text="test lifecycle"
-        android:layout_height="wrap_content"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:context=".MainActivity">
 
-    <Button
-        android:id="@+id/bt_outline"
-        android:layout_width="wrap_content"
-        android:text="test outline"
-        android:layout_height="wrap_content"/>
+        <Button
+            android:id="@+id/bt_lifecycle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="test lifecycle" />
 
-    <Button
-        android:id="@+id/bt_drawable"
-        android:layout_width="wrap_content"
-        android:text="test drawable"
-        android:layout_height="wrap_content"/>
+        <Button
+            android:id="@+id/bt_outline"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="test outline" />
 
-    <Button
-        android:id="@+id/bt_coordinator"
-        android:layout_width="wrap_content"
-        android:text="test coordinator"
-        android:layout_height="wrap_content"/>
+        <Button
+            android:id="@+id/bt_drawable"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="test drawable" />
 
+        <Button
+            android:id="@+id/bt_coordinator"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="test coordinator" />
 
-</LinearLayout>
+        <Button
+            android:id="@+id/bt_scroll"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="test scroll" />
+
+    </LinearLayout>
+</androidx.core.widget.NestedScrollView>
