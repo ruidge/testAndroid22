@@ -11,4 +11,12 @@ object CommonUtil {
         view.outlineProvider = RoundViewOutlineProvider(radius)
         view.clipToOutline = true
     }
+
+    public fun clipViewOutlineBottomRadius(
+        view: View,
+        radius: Float
+    ): Unit {
+        view.outlineProvider = BottomRoundViewOutlineProvider(radius)
+        view.clipToOutline = true
+    }
 }

@@ -24,4 +24,11 @@
 
     </RelativeLayout>
 
+    <ImageView
+        android:id="@+id/iv2"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_centerInParent="true"
+        android:src="@color/red" />
+
 </RelativeLayout>

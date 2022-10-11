@@ -1,31 +1,30 @@
 package com.example.testandroid22
 
+import android.content.Context
 import android.os.Bundle
-import android.view.View
-import android.widget.ImageView
 import androidx.appcompat.app.AppCompatActivity
+import com.example.testandroid22.databinding.ActivityOutlineBinding
 import com.example.testandroid22.utils.CommonUtil
 import com.example.testandroid22.utils.density.dp2pxF
 
 class OutlineActivity : AppCompatActivity() {
 
-    lateinit var root: View
+    lateinit var binding: ActivityOutlineBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-
-        root = layoutInflater.inflate(R.layout.activity_outline, null, false)
-        setContentView(root)
-
-        init()
+        binding = ActivityOutlineBinding.inflate(layoutInflater)
+        setContentView(binding.root)
+        init(this)
     }
 
-    private fun init() {
-        val container: View = findViewById(R.id.rl_container)
-        val iv1: ImageView = findViewById(R.id.iv1)
+    private fun init(context: Context) {
+        with(binding) {
+            CommonUtil.clipViewOutline(rlContainer, 20.dp2pxF)
+            CommonUtil.clipViewOutline(root, 50.dp2pxF)
+            CommonUtil.clipViewOutline(iv1, 50.dp2pxF)
+            CommonUtil.clipViewOutlineBottomRadius(iv2, 50.dp2pxF)
+        }
 
-        CommonUtil.clipViewOutline(container, 20.dp2pxF)
-        CommonUtil.clipViewOutline(root, 50.dp2pxF)
-        CommonUtil.clipViewOutline(iv1, 50.dp2pxF)
     }
 }
